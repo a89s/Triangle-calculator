@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle calculator</title>
+  <!-- Google fonts -->  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Calculator -->
+  <div id="wrapper">
+    <h1>Triangle calculator</h1>
+    <!-- Window where the triangle name will be drawn -->
+    <canvas id="calculator" width="400" height="300"></canvas>
+    <!-- Round number inputs -->
+    <label class="value-input one">
+      <input type="number" placeholder=" " id="x" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+      <span class="placeholder">A Side</span>
+    </label>
+    <label class="value-input one">
+      <input type="number" placeholder=" " id="y" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+      <span class="placeholder">B Side</span>
+    </label>
+    <label class="value-input one">
+      <input type="number" placeholder=" " id="z" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+      <span class="placeholder">C Side</span>
+    </label>
+    <!-- Calculate button -->
+    <button type="submit" onclick="triangle();"/>CALCULATE</button>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
