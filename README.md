@@ -1,2 +1,2 @@
 # Triangle-calculator
-HTML, CSS and JS trangle calculator
+HTML, CSS and JS triangle calculator
