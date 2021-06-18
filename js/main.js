@@ -27,35 +27,35 @@ context.stroke();
 
 function triangle() {
 
-	let calculator = document.getElementById("calculator");
-	let context = calculator.getContext("2d");
+  let calculator = document.getElementById("calculator");
+  let context = calculator.getContext("2d");
 
-	let xx = document.getElementById("x").value;
-    let yy = document.getElementById("y").value;
-    let zz = document.getElementById("z").value;
+  let aSideParsed = document.getElementById("a_side").value;
+  let bSideParsed = document.getElementById("b_side").value;
+  let cSideParsed = document.getElementById("c_side").value;
 
-    let x = parseInt(xx);
-    let y = parseInt(yy);
-    let z = parseInt(zz);
+  let a_side = parseInt(aSideParsed);
+  let b_side = parseInt(bSideParsed);
+  let c_side = parseInt(cSideParsed);
 
-	if ((x != 0) && (y != 0) && (z != 0)) {
+	if ((a_side != 0) && (b_side != 0) && (c_side != 0)) {
 
-	  if ((x + y <= z) || (x + z <= y) || (y + z <= x)) {
+	  if ((a_side + b_side <= c_side) || (a_side + c_side <= b_side) || (b_side + c_side <= a_side)) {
 	  	  context.font = "20px Arial";
 	      context.fillText("Not possible",150, 260);
 	  }
 
-	  else if ((x == y) && (x != z) || (x == z) && (x != y) || (y == z) && (y != x)) {
+	  else if ((a_side == b_side) && (a_side != c_side) || (a_side == c_side) && (a_side != b_side) || (b_side == c_side) && (b_side != a_side)) {
 	  	  context.font = "20px Georgia";
 	      context.fillText("Isosceles triangle",125, 260);
 	  }
 
-	  else if ((x != y) && (y != z)) {
+	  else if ((a_side != b_side) && (b_side != c_side)) {
 	  	  context.font = "20px Georgia";
 	      context.fillText("Scalene triangle",125, 260);
 	  }
 
-	  else if ((x == y) && (y == z)) {
+	  else if ((a_side == b_side) && (b_side == c_side)) {
 	  	  context.font = "20px Georgia";
 	      context.fillText("Equilateral triangle",125, 260);
 	  }
