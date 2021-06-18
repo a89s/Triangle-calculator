@@ -1,5 +1,13 @@
+:root {
+  --color-white: #ffffff;
+  --color-green: #3eb548;
+  --color-darkblue: #486073;
+  --color-blue: #349eeb;
+  --color-grey: #333333;
+  --color-lightblue: #ccf6ff;
+}
 body {
-  background-color: #ccf6ff;
+  background-color: var(--color-lightblue);
 }
 
 *, *::before, *::after {
@@ -15,7 +23,7 @@ body {
   align-items: center;
   font-family: sans-serif;
   font-size: 16px;
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 40px;
   margin: 0 auto;
   border-radius: 10px;
@@ -29,8 +37,8 @@ body {
 }
 #wrapper button {
     padding: 10px; 
-    background: #3eb548; 
-    color: #ffffff;
+    background: var(--color-green); 
+    color: var(--color-white);
     border: 0 none;
     cursor: pointer;
     -webkit-border-radius: 5px;
@@ -41,7 +49,7 @@ body {
 #wrapper #calculator {
   height: 300px;
   width: 400px;
-  border:1px solid #333;
+  border:1px solid var(--color-grey);
   border-radius: 3px;
 }
 
@@ -60,7 +68,7 @@ body {
   -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #f2f2f2;
+  background: var(--color-white);
   padding: var(--field-padding);
   border-radius: 3px;
   width: 150px;
@@ -78,7 +86,7 @@ body {
   top: 22px;
   line-height: 100%;
   transform: translateY(-50%);
-  color: #486073;
+  color: var(--color-darkblue);
   transition: 
     top 0.3s ease,
     color 0.3s ease,
@@ -90,12 +98,12 @@ body {
 .value-input input:not(:placeholder-shown) + .placeholder {
   top: -10px;
   font-size: 10px;
-  color: #349eeb;
+  color: var(--color-blue);
 }
 
 .value-input.one input {
   background: none;
-  border: 1px solid #333;
+  border: 1px solid var(--color-grey);
   transition: border-color 0.3s ease;
 }
 
@@ -107,7 +115,7 @@ body {
 .value-input.one input.dirty,
 .value-input.one input:not(:placeholder-shown),
 .value-input.one input:focus {
-  border-color: #3eb548;
+  border-color: var(--color-green);
   transition-delay: 0.1s
 }
 
@@ -116,7 +124,7 @@ body {
 .value-input.one input:focus + .placeholder {
   top: 0;
   font-size: 10px;
-  color: #3eb548;
-  background: #fff;
+  color: var(--color-green);
+  background: var(--color-white);
   width: auto
 }
